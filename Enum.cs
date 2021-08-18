@@ -22,7 +22,7 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine(Date.SUN);
         }
     }
 }
