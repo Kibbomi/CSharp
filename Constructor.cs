@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CSharp
@@ -35,6 +35,12 @@ namespace CSharp
                 Console.WriteLine($"x : {this.x}, y : {this.y}");
             }
 
+            //deep copy
+            public Point deepCopy()
+            {
+                return new Point(this.x, this.y);
+            }
+
             public int x { get; set; }
             public int y { get; set; }
         }
@@ -51,6 +57,7 @@ namespace CSharp
             Point ptRef;
 
             //ptRef refer a pt1(ptRef -----> pt1)
+            //Shallow copy
             ptRef = pt1;
             ptRef.x = 100;
             ptRef.y = 100;
@@ -58,7 +65,16 @@ namespace CSharp
             //they have same values
             ptRef.Print();
             pt1.Print();
-            
+
+
+            //deep copy
+            ptRef = pt1.deepCopy();
+            ptRef.x = 1;
+            ptRef.y = 1;
+
+            ptRef.Print();
+            pt1.Print();
+
         }
     }
 }
