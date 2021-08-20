@@ -24,10 +24,20 @@ namespace CSharp
     class Generic_class
     {
         /*
-         * public static T GenericMethod <T, U> (T a, U b) where : conditions
+         * public static T GenericMethod <T, U> (T a, U b) where T : conditions
          * {
          *  //implement
          * }
+         */
+
+        /*
+         * <T> where T :
+         * class -> T must be reference type
+         * struct -> T must be value type
+         * new() -> T must have constructor which doesn't have any parameters
+         * BaseClass(anything) : T must inherit BaseClass ,,,T : BaseClass
+         * Interface(anything) : Same
+         * 
          */
         static void Main(string[] args)
         {
