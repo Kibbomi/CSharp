@@ -24,6 +24,11 @@ namespace CSharp
                 Console.WriteLine($"Point, x : {this.x}, y : {this.y}");
             }
 
+            public virtual double getArea()
+            {
+                return 0;
+            }
+
             public int x { get; set; }
             public int y { get; set; }
         }
@@ -43,6 +48,11 @@ namespace CSharp
             override public void Print()
             {
                 Console.WriteLine($"Circle, x : {this.x}, y : {this.y} r : {this.r}");
+            }
+
+            new public double getArea() //seal point's getArea
+            {
+                return Math.PI * r * r;
             }
 
             public int r { get; set; }
