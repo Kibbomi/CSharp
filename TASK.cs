@@ -12,8 +12,18 @@ namespace CSharp
         static void Main(string[] args)
         {
 
+            
+            //The Action delegate have not to has any parameters!!
+            //when the parameters exist, first, declare Action delegate which has no parameters,
+            //and Call method(Function) in that Action delegate(Anonymous method)
+            /*
+            * Task t = Task.Run(
+            ()=>{doSomething(arg1, arg2, arg3...);}
+            );
+            *
+            */
             #region No return value, --> use Action delegate
-            //Task t1 = new Task( Action (anonymous function) ),,,,, t1.start() OK;
+            //Task t1 = new Task( Action (anonymous function) ),,,,, t1.start() OK;    
             Task t1 = Task.Run(() =>
             {
                 for (int i = 1; i <= 500000; ++i)
