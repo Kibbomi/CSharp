@@ -2,6 +2,7 @@
 
 namespace CSharp
 {
+    //KeyValuePair<TKey,TValue>.....
     public class Pair<T, U>
     {
         public Pair()
